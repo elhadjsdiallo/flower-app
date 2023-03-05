@@ -1,0 +1,25 @@
+#spring.mvc.pathmatch.matching-strategy=ant_path_matcher
+logging:
+     level:
+      root: INFO
+spring:
+  datasource:
+    password: testpass
+    url: jdbc:postgresql://localhost:5432/devdb
+    username: postgres
+  servlet:
+    multipart:
+       max-file-size: 10MB
+       max-request-size: 10MB
+  jpa:
+    database: POSTGRESQL
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  sql:
+    init:
+      platform: postgres
+
